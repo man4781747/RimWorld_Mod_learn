@@ -1,8 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+  <!-- 架構約為
   <LifeStageDef>
-    <defName>TestBeastBaby</defName>
-    <label>baby</label>
+    <defName> 名稱 </defName>
+    <label> 遊戲內顯示名稱 </label>
+    <voxPitch> 尚未知 </voxPitch>
+    <voxVolume> 尚未知 </voxVolume>
+    <bodySizeFactor> 尚未知 不是貼圖大小 </bodySizeFactor>
+    <healthScaleFactor> 尚未知 健康相關 </healthScaleFactor>
+    <hungerRateFactor> 尚未知 飢餓相關 </hungerRateFactor>
+    <marketValueFactor> 尚未知 市場價格相關 </marketValueFactor>
+    <statFactors>
+      <MoveSpeed> 尚未知 移動速度相關 </MoveSpeed>
+    </statFactors>
+  </LifeStageDef>
+  -->
+
+  <LifeStageDef>
+    <defName>TestBeastBaby</defName>      <!-- 這裡要與Defs\ThingDefs_Races\下的 
+                                               Races_Animal_TestBeast.xml 中 
+                                               <ThingDef ParentName="AnimalThingBase"> 內
+                                               的<race>下面的<lifeStageAges>裡頭設置的
+                                               名稱相同-->
+    <label> 寶寶 </label>
     <voxPitch>1.6</voxPitch>
     <voxVolume>0.8</voxVolume>
     <bodySizeFactor>0.2</bodySizeFactor>
@@ -13,9 +33,10 @@
       <MoveSpeed>1.0</MoveSpeed>
     </statFactors>
   </LifeStageDef>
+  
   <LifeStageDef>
     <defName>TestBeastTeen</defName>
-    <label>teen</label>
+    <label> 年輕 </label>
     <voxPitch>1.2</voxPitch>
     <bodySizeFactor>0.3</bodySizeFactor>
     <healthScaleFactor>0.6</healthScaleFactor>
@@ -25,9 +46,10 @@
       <MoveSpeed>1.8</MoveSpeed>
     </statFactors>
   </LifeStageDef>
+  
   <LifeStageDef>
     <defName>TestBeastAdout</defName>
-    <label>juvenile</label>
+    <label> 成年 </label>
     <voxPitch>1.1</voxPitch>
     <bodySizeFactor>0.6</bodySizeFactor>
     <healthScaleFactor>0.6</healthScaleFactor>

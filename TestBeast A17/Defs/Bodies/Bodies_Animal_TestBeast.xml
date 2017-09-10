@@ -1,23 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!--
-	Each coverage value is relative to its parent.
-	Remaining body part coverage (100% minus coverage of all child nodes) is a chance to hit exactly this part.
-	Damage "starts" at corePart, and then "goes deeper" until it hits remaining body part coverage or leaf node
-  - this body part is then hit.
--->
 <BodyDefs>
-  <BodyDef>
-    <defName>TestBeastBody</defName>    <!-- 重要 -->>
-    <label>測試獸</label>
-    <corePart>
-      <def>Torso</def>
+  <BodyDef>  <!-- 定義空殼 -->
+    <defName>TestBeastBody</defName>  <!-- 定義空殼名稱 -->
+    <label> 測試獸的身體~ </label>    <!-- 定義空殼在健康內欄位的名稱 -->
+    <corePart>                        <!-- 核心內容 -->
+      <!-- 主幹 -->
+      <def>Torso</def>                
       <height>Middle</height>
       <depth>Outside</depth>
       <groups>
         <li>Torso</li>
       </groups>
       <parts>
-        <!-- 胸骨 -->
+        <!-- 主要架構
+        <li>
+          <def> 由BodyParts中取出設定好的物件 </def>
+
+          <height>  此物件位於父物件的位置 </height>
+          <depth> 此物件位於父物件內或外  </depth> 
+          <coverage> 覆蓋面積 </coverage>
+          <groups>
+            <li> 此物件為BodyPartGroups內的何種分類 <li>
+          </groups>
+          <part>
+            <li>
+              子物件
+            </li>
+          </part>   
+        </li>
+        -->
         <li>
           <def>Sternum</def>
           <coverage>0.005</coverage>
@@ -26,7 +37,7 @@
             <li>Torso</li>
           </groups>
         </li>
-        <!-- 16肋骨 -->
+        
         <li>
           <def>Rib</def>
           <coverage>0.003</coverage>
@@ -155,7 +166,6 @@
             <li>Torso</li>
           </groups>
         </li>
-        <!-- 單骨盆 -->
         <li>
           <def>Pelvis</def>
           <coverage>0.01</coverage>
@@ -165,7 +175,6 @@
             <li>Torso</li>
           </groups>
         </li>
-        <!-- 雙脊椎 -->>
         <li>
           <def>Spine</def>
           <coverage>0.02</coverage>
@@ -174,15 +183,6 @@
             <li>Torso</li>
           </groups>
         </li>
-        <li>
-          <def>Spine</def>
-          <coverage>0.02</coverage>
-          <depth>Inside</depth>
-          <groups>
-            <li>Torso</li>
-          </groups>
-        </li>
-        <!-- 雙胃 -->
         <li>
           <def>Stomach</def>
           <coverage>0.02</coverage>
@@ -199,7 +199,6 @@
             <li>Torso</li>
           </groups>
         </li>
-        <!-- 雙心臟 -->
         <li>
           <def>Heart</def>
           <coverage>0.02</coverage>
@@ -216,7 +215,6 @@
             <li>Torso</li>
           </groups>
         </li>
-        <!-- 雙對左右肺 -->
         <li>
           <def>LeftLung</def>
           <coverage>0.02</coverage>
@@ -249,7 +247,6 @@
             <li>Torso</li>
           </groups>
         </li>
-        <!-- 雙對左右腎 -->
         <li>
           <def>LeftKidney</def>
           <coverage>0.015</coverage>
@@ -282,7 +279,6 @@
             <li>Torso</li>
           </groups>
         </li>
-        <!-- 雙肝 -->
         <li>
           <def>Liver</def>
           <coverage>0.025</coverage>
@@ -299,7 +295,7 @@
             <li>Torso</li>
           </groups>
         </li>
-        <!-- 單脖子 -->>
+        <!-- 單脖子 -->
         <li>
           <def>Neck</def>
           <coverage>0.08</coverage>

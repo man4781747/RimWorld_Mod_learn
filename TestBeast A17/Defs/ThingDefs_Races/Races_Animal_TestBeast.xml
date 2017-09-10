@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef ParentName="AnimalThingBase">
-    <defName>TestBeast</defName>
-    <label>測試獸</label>
-    <description> 測試用動物 </description>
+  <ThingDef ParentName="AnimalThingBase"> 
+    <defName>TestBeast</defName>         <!-- 定義名稱(重要) -->
+    <label> 測試獸 </label>
+    <description> 這是測試獸的介紹 </description>
     <statBases>
-      <MoveSpeed>10</MoveSpeed>
-      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
-      <ComfyTemperatureMax>100</ComfyTemperatureMax>
-      <MarketValue>2266</MarketValue>
-      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+      <MoveSpeed>10</MoveSpeed>    <!-- 移動速度 -->
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>  <!-- 最低忍耐溫度 -->
+      <ComfyTemperatureMax>100</ComfyTemperatureMax>   <!-- 最高忍耐溫度 -->
+      <MarketValue>2266</MarketValue>                  <!-- 市場價格 -->
+      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>       <!-- 抗敲擊裝甲 -->
+      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>       <!-- 抗銳物裝甲 -->
     </statBases>
     <verbs>
       <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>1.6</defaultCooldownTime>
+        <verbClass>Verb_MeleeAttack</verbClass>        <!-- 行動類型 -->
+        <defaultCooldownTime>1.6</defaultCooldownTime> <!-- 行動冷卻時間 -->
         <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
         <meleeDamageDef>Blunt</meleeDamageDef>
         <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
@@ -59,22 +59,6 @@
         </surpriseAttack>
       </li>
     </verbs>
-    <!-- 沒有生產 -->
-    <!--
-    <comps>
-      <li Class="CompProperties_Milkable">
-        <milkDef>OniMilk</milkDef>
-        <milkIntervalDays>2</milkIntervalDays>
-        <milkAmount>5</milkAmount>
-      </li>
-      <li Class="CompProperties_Shearable">
-        <woolDef>OniWool</woolDef>
-        <shearIntervalDays>10</shearIntervalDays>
-        <woolAmount>30</woolAmount>
-      </li>
-    </comps>
-    -->
-    
     <race>
       <body>TestBeastBody</body>
       <predator>true</predator>
@@ -172,26 +156,22 @@
     <race>TestBeast</race>
     <combatPower>500</combatPower>
     <lifeStages>
-      <!-- 幼年 -->
       <li>
-        <label>測試獸幼年</label>
-        <labelPlural>好多測試獸幼年</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/TestBeast_baby</texPath>
-          <drawSize>5.0</drawSize>
-          <color>(222,222,222)</color>
+          <drawSize>1.0</drawSize>
+          <color>(222, 222, 222)</color>
           <shaderType>CutoutComplex</shaderType>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Dessicated/TestBeastBabyDessicated</texPath>
-          <drawSize>5.0</drawSize>
+          <drawSize>1.0</drawSize>
         </dessicatedBodyGraphicData>
       </li>
-      <!-- 青年 -->>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/TestBeast_teen_male</texPath>
-          <drawSize>6.0</drawSize>
+          <drawSize>1.0</drawSize>
           <color>(242,242,242)</color>
           <shaderType>CutoutComplex</shaderType>
           <shadowData>
@@ -201,7 +181,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/TestBeast_teen_female</texPath>
-          <drawSize>6.0</drawSize>
+          <drawSize>1.0</drawSize>
           <shadowData>
             <volume>(0.25, 0.3, 0.25)</volume>
             <offset>(0,0,-0.15)</offset>
@@ -209,10 +189,9 @@
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Dessicated/TestBeastTeenDessicated</texPath>
-          <drawSize>6.0</drawSize>
+          <drawSize>1.0</drawSize>
         </dessicatedBodyGraphicData>
       </li>
-      <!-- 成年 -->>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/TestBeast_adult_male</texPath>
@@ -226,7 +205,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/TestBeast_adult_female</texPath>
-          <drawSize>10.0</drawSize>
+          <drawSize>1.0</drawSize>
           <shadowData>
             <volume>(0.25, 0.3, 0.25)</volume>
             <offset>(0,0,-0.15)</offset>
@@ -234,7 +213,7 @@
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Dessicated/TestBeastAdultDessicated</texPath>
-          <drawSize>10.0</drawSize>
+          <drawSize>1.0</drawSize>
         </dessicatedBodyGraphicData>
 
         <butcherBodyPart>

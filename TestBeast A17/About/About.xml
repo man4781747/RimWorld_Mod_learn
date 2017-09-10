@@ -2,7 +2,8 @@
 <ModMetaData>
   <name>Garana Bome Test</name>  <!-- mod名稱 -->
   <author>Garana Bome</author>   <!-- mod作者 -->
-  <targetVersion> A17 </targetVersion>
+  <targetVersion>0.17.1546</targetVersion>  <!-- 版本設定 -->
   <description>Garana_Bome MOD 練習(簡易版)</description>  <!-- mod的註解 -->
+  <url>https://github.com/man4781747/RimWorld_Mod_learn</url>
 
 </ModMetaData>
