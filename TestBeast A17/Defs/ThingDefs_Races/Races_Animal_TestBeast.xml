@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>TestBeast</defName>
+    <label>測試獸</label>
+    <description> 測試用動物 </description>
+    <statBases>
+      <MoveSpeed>10</MoveSpeed>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>100</ComfyTemperatureMax>
+      <MarketValue>2266</MarketValue>
+      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.6</defaultCooldownTime>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>10</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.6</defaultCooldownTime>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>10</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>2.4</defaultCooldownTime>
+        <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>30</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </verbs>
+    <!-- 沒有生產 -->
+    <!--
+    <comps>
+      <li Class="CompProperties_Milkable">
+        <milkDef>OniMilk</milkDef>
+        <milkIntervalDays>2</milkIntervalDays>
+        <milkAmount>5</milkAmount>
+      </li>
+      <li Class="CompProperties_Shearable">
+        <woolDef>OniWool</woolDef>
+        <shearIntervalDays>10</shearIntervalDays>
+        <woolAmount>30</woolAmount>
+      </li>
+    </comps>
+    -->
+    
+    <race>
+      <body>TestBeastBody</body>
+      <predator>true</predator>
+      <petness>1</petness>
+      <herdAnimal>true</herdAnimal>
+      <baseBodySize>3</baseBodySize>
+      <baseHungerRate>0.1</baseHungerRate>
+      <baseHealthScale>10.5</baseHealthScale>
+      <foodType>OmnivoreRoughAnimal,OvivoreAnimal,DendrovoreAnimal</foodType>
+      <leatherColor>(255, 190, 26)</leatherColor>
+      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+      <leatherMarketValueFactor>200</leatherMarketValueFactor>
+      <leatherLabel>TestBeastskin</leatherLabel>
+      <leatherInsulation>1.0</leatherInsulation>
+      <gestationPeriodDays>1</gestationPeriodDays>
+      <nameOnTameChance>1</nameOnTameChance>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <wildness>0.10</wildness>
+      <nuzzleMtbHours>24</nuzzleMtbHours>
+      <packAnimal>false</packAnimal>
+      <wildBiomes>
+        <TemperateForest>0.5</TemperateForest>
+        <BorealForest>0.5</BorealForest>
+        <Tundra>0.5</Tundra>
+      </wildBiomes>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>3000</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>TestBeastBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>TestBeastTeen</def>
+          <minAge>5</minAge>
+        </li>
+        <li>
+          <def>TestBeastAdout</def>
+          <minAge>10</minAge>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+          <li>(4,0)</li>
+          <li>(9,25)</li>
+          <li>(15,55)</li>
+          <li>(18,20)</li>
+          <li>(25,0)</li>
+        </points>
+      </ageGenerationCurve>
+    </race>
+    <tradeTags>
+      <li>StandardAnimal</li>
+      <li>BadassAnimal</li>
+    </tradeTags>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bullet</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+    </damageMultipliers>
+    <recipes>
+      <li>InstallPowerClaw</li>
+      <li>InstallScytherBlade</li>
+      <li>InstallBionicEye</li>
+      <li>InstallBionicArm</li>
+      <li>InstallBionicLeg</li>
+      <li>InstallSimpleProstheticArm</li>
+      <li>InstallSimpleProstheticLeg</li>
+      <li>InstallPegLeg</li>
+      <li>InstallDenture</li>
+      <li>InstallJoywire</li>
+      <li>InstallPainstopper</li>
+      <li>InstallNaturalHeart</li>
+      <li>InstallNaturalLung</li>
+      <li>InstallNaturalKidney</li>
+      <li>InstallNaturalLiver</li>
+    </recipes>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>TestBeast</defName>
+    <label>測試獸</label>
+    <labelPlural>很多測試獸</labelPlural>
+    <race>TestBeast</race>
+    <combatPower>500</combatPower>
+    <lifeStages>
+      <!-- 幼年 -->
+      <li>
+        <label>測試獸幼年</label>
+        <labelPlural>好多測試獸幼年</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/TestBeast_baby</texPath>
+          <drawSize>5.0</drawSize>
+          <color>(222,222,222)</color>
+          <shaderType>CutoutComplex</shaderType>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/TestBeastBabyDessicated</texPath>
+          <drawSize>5.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <!-- 青年 -->>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/TestBeast_teen_male</texPath>
+          <drawSize>6.0</drawSize>
+          <color>(242,242,242)</color>
+          <shaderType>CutoutComplex</shaderType>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/TestBeast_teen_female</texPath>
+          <drawSize>6.0</drawSize>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/TestBeastTeenDessicated</texPath>
+          <drawSize>6.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <!-- 成年 -->>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/TestBeast_adult_male</texPath>
+          <drawSize>10.0</drawSize>
+          <color>(244,244,244)</color>
+          <shaderType>CutoutComplex</shaderType>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/TestBeast_adult_female</texPath>
+          <drawSize>10.0</drawSize>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/TestBeastAdultDessicated</texPath>
+          <drawSize>10.0</drawSize>
+        </dessicatedBodyGraphicData>
+
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>OniHorn</thing>
+        </butcherBodyPart>
+      </li>
+    </lifeStages>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.9</wildSpawn_EcoSystemWeight>
+    <wildSpawn_GroupSizeRange>
+      <min>2</min>
+      <max>4</max>
+    </wildSpawn_GroupSizeRange>
+  </PawnKindDef>
+</Defs>

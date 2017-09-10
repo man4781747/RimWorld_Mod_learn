@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Garana Bome Test</name>  <!-- mod名稱 -->
+  <author>Garana Bome</author>   <!-- mod作者 -->
+  <targetVersion> A17 </targetVersion>
+  <description>Garana_Bome MOD 練習(簡易版)</description>  <!-- mod的註解 -->
+
+</ModMetaData>
